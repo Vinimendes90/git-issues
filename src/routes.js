@@ -10,7 +10,7 @@ export default function src() {
     <BrowserRouter>
     <Switch>
     <Route path="/" exact component={Main} />
-    <Route path="/repository" component={Repository} />
+    <Route path="/repository/:repository" component={Repository} />{/* aqui estarei passando o parametro q eu irei utilizar para dividir as paginas*/}
     </Switch>
     </BrowserRouter>  
   );

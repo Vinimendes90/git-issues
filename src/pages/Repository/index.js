@@ -1,9 +1,12 @@
 import React from 'react';
 
 // import { Container } from './styles';
-
-export default function Repository() {
+import {Link} from 'react-router-dom'
+export default function Repository( {match }) {
   return (
-    <h1>Repository</h1>
+    <Link to='/'>Repository: {decodeURIComponent(match.params.repository)}</Link>
   );
 }
+
+
+

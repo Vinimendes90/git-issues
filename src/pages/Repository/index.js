@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
-import{Loading, IssueList} from './styles';
+import{Owner, Loading, IssueList} from './styles';
 
 import Container from '../../components/Container';
 
@@ -57,31 +57,31 @@ class Repository extends Component{
        return <Loading>Carregando...</Loading>
      }
   return ( 
-    <>
+    
      <Container>
+       <Owner>
        <header>
+         <Link to="/">Repositorio</Link>
          <img src= {repository.owner.avatar_url} alt={repository.owner.login}/>
-         <strong>{repository.owner.name}</strong>
-         <small>{repository.owner.login}</small>
+         <strong>{repository.name}</strong>
+         <p>{repository.description}</p>
         </header>
-
-        <ul>
-          <li>{repository.stargazers_count}<small> stars</small></li>
-          <li>{repository.forks_count}<small> forks</small></li>
-          <li>{repository.open_issues_count}<small> issues</small></li>
-          <li>{repository.pushed_at}<small> last commit</small></li>
-        </ul>
-     </Container>
-
+        </Owner>
      <IssueList>
        {issues.map(issue => (
          <li key={String(issue.id)}>
            <img src={issue.user.avatar_url} alt='Perfil' />
+           <div>
+             <strong>
+           <a href={issue.html_url}>{issue.title}</a>
+           </strong>
+           <p>{issue.user.login}</p>
+           </div>
          </li>
        ))}
      </IssueList>
-     </>
-    )
+       </Container>
+    );
   }
 }
 

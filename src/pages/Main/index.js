@@ -4,7 +4,6 @@ import {FaGithubAlt, FaPlus, FaSpinner} from 'react-icons/fa';
 import api from '../../services/api';
 
 import Container from '../../components/Container';
-
 import {Form, SubmitButton, List} from './styles';
 
 import {Link} from 'react-router-dom';
@@ -59,7 +58,7 @@ export default class Main extends Component{
        loading: false,
     });
   } catch(error){
-        document.write(error)
+        
   }
 
   };

@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { black } from 'ansi-colors';
-
 
 const Container = styled.div`
 max-width: 600px;
@@ -9,8 +7,8 @@ background: #FFF;
 margin: 80px auto;
 padding: 30px;
 
-border-radius: 20px;
-border: 1px solid black;
+border-radius: 20px 0 20px 0;
+
 
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
@@ -28,8 +26,7 @@ h1{
  ul li{
      list-style: none
  }
-`;
 
- 
+ `;
 export default Container;
 

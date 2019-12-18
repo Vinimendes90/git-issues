@@ -34,7 +34,7 @@ background: #008000;
 border: none;
 width: 30px;
 margin-left: 10px;
-border-radius: 5px;
+border-radius: 5px 50px 5px 5px;
 
 display: flex;
 justify-content: center;
@@ -73,7 +73,7 @@ export const List = styled.ul`
   }
 
   a{
-      color: #008000;
+      color: rgb(0, 0, 0, 25);
       text-decoration: none;
   }
 }
